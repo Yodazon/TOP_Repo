@@ -25,6 +25,16 @@ h1{
     border: 5px solid brown;
     height: 100px;
  }
+ .romance{
+    color: pink;
+ }
+ .about-clicked{
+    color: blue;
+ }
+ .about-Unclicked{
+    color:black;
+ }
+ 
 /*.flex-container .two{
     flex: 1;
 }*/
