@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js-file.js"defer></script>
+</head>
+<body>
+
+    <!--METHOD 1, This solution is less than ideal because we’re cluttering our HTML with JavaScript. 
+    Also, we can only set one “onclick” property per DOM element, so we’re unable to run 
+    multiple separate functions in response to a click event using this method.-->
+    <button onclick="alert('Hello World')">Click Me</button>
+
+    <!--METHOD 2, This is a little better. We’ve moved the JS out of the HTML and into a JS file,
+         but we still have the problem that a DOM element can only have 1 “onclick” property.-->
+    <button id="btn">Click Me</button>
+
+    <!-- the HTML file -->
+    <button id="btn2">Click Me Too</button>
+
+
+    <button onclick="alertFunction()">CLICK ME BABY</button>
+
+
+</body>
+</html>
