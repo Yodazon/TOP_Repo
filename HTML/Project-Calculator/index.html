@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator
+    </title>
+    <!-- CSS code below-->
+    <link rel="stylesheet" href="styles.css">
+    <script src ="code.js"></script>
+</head>
+    <body>
+
+
+        <div id="calculatorContainer" class="CalculatorSquare">
+            <div id="displayBox" data-placeholder='0' class = "css_displayBox"></div>
+            <div id="numberButtonContainer" class="class_numberButtonContainer">
+                <button id="button0" onclick="inputValue(event.target.innerText)" class = "numButtons">0</button>
+                <button id="button1"onclick="inputValue(event.target.innerText)" class = "numButtons">1</button>
+                <button id="button2"onclick="inputValue(event.target.innerText)"class = "numButtons">2</button>
+                <button id="button3"onclick="inputValue(event.target.innerText)"class = "numButtons">3</button>
+                <button id="button4"onclick="inputValue(event.target.innerText)"class = "numButtons">4</button>
+                <button id="button5"onclick="inputValue(event.target.innerText)"class = "numButtons">5</button>
+                <button id="button6"onclick="inputValue(event.target.innerText)"class = "numButtons">6</button>
+                <button id="button7"onclick="inputValue(event.target.innerText)"class = "numButtons">7</button>
+                <button id="button8"onclick="inputValue(event.target.innerText)"class = "numButtons">8</button>
+                <button id="button9"onclick="inputValue(event.target.innerText)"class = "numButtons">9</button>
+            </div>
+            <div id="FunctionButtonContainer">
+                <button id="buttonPlus"onclick="mathInput(event.target.innerText)"class = "mathButtons">+</button>
+                <button id="buttonMinus"onclick="mathInput(event.target.innerText)"class = "mathButtons">-</button>
+                <button id="buttonDivide"onclick="mathInput(event.target.innerText)"class = "mathButtons">/</button>
+                <button id="buttonMulti"onclick="mathInput('*')"class = "mathButtons">X</button>
+            </div>
+            <button onclick="mathIfFunction(mathOp,actualInt, mathInt )">Calculate</button>
+
+
+
+
+
+        </div>
+
+    </body>
+</html>

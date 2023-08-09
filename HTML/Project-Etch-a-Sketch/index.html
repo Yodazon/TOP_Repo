@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Etch a Sketch</title>
+
+        <!--CSS is in the file below -->
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+
+
+        <h1>Pick a Colour</h1>
+        <button onclick="PickGridBoxColour('red');">Red</button>
+        <button onclick="PickGridBoxColour('blue');">Blue</button>
+        <button onclick="randomColourGenerator();">Random</button>
+        <input placeholder = "how large of grid would you like?" class=" js-grid-input css-grid-input" onkeydown= "handleKeyDown(event)">
+        <button onclick = "calcGridSize();">Calculate</button>
+        <div id = "parentContainer" class = "gridPlayArea"></div>
+
+    
+
+    </body>
+    <script src="code.js"></script>
+</html>
