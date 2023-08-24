@@ -1,0 +1,16 @@
+table, td, th{
+
+    border: 1px solid;
+}
+
+button:hover{
+    color:blue;
+    background-color: black;
+}
+  .emojify::before {
+    content: '😎 🥸 🤓';
+}
+
+  .emojify::after {
+    content: '🤓 🥸 😎';
+}
