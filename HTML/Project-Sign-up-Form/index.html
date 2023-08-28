@@ -8,13 +8,40 @@
     <script src = "code.js"></script>
 </head>
 <body>
-    <fieldset class="field">
-        <label for="first_name">First Name</label>
-        <input type="text" id="first_name" name="first_name">
-      
-        <label for="last_name">Last Name</label>
-        <input type="text" id="last_name" name="last_name">
-      </fieldset>
+    <div id="left_div">
+        <div id="img_block">
+            <img src="assets\sailboat-logo.jpg" id="boat">
+            <p id="boats_name">Boats Boats Boats</p>
+        </div>
+
+    </div>
+
+    <div id="right_div">
+        <p id="quote">Come Sailing with us!!</p>
+        <div id="form_box">        
+            <form class="form">
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name" placeholder="John">
+        
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Doe">
+
+            <label for="Email">Email</label>
+            <input type="email" id="email" name="email" placeholder="JohnDoe@example.com">
+
+            <label for="phone_number">Phone Number</label>
+            <input type="tel" id="phone_number" name="phone_number" placeholder="123-456-7890">
+
+            <label for="Password">Password</label>
+            <input type="password" id="password" name="password" placeholder="JoneDoe12!">
+
+            <label for="Confirm Password">Confirm Password</label>
+            <input type="password" id="password_confirm" name="password_confirm" placeholder="JohnDoe12!" >
+
+            <button type="submit" id="Submit_button">Create Account</button>
+        </form>
+        </div>
+    </div>
 
 
     

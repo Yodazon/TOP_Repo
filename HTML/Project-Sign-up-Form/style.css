@@ -1,6 +1,96 @@
 :root{
-
     font-family:Arial, Helvetica, sans-serif;
+    width:100vw;
+    height:100vh;
+    margin: 0px;
+}
+body{
+    display: flex;
+    align-items: row;
+}
+form{
+    font-size: large;
+}
+input{
+    width: 20rem;
+    background:lightseagreen;
+    border-radius: 1rem;
+    color:black;
+}
+::placeholder{
+    color:black;
+}
+.form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    position: relative;
+    width: 55vw;
 
+    /*background: white;*/
+}
+#left_div{
+    background: url(./assets/boat.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45vw;
+    height: 100vh;
+}
+#img_block{
+    background-color: rgb(230, 96, 6,0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%
+}
+#img_block #boat{
+    border-radius: 50%;
+    width: 10vw;
+}
+#boats_name{
+    padding: 2rem;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size:3rem;
+    color:white
 
+}
+
+#right_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 55vw;
+    height: 100vh;
+}
+#form_box{
+    align-items: center;
+    padding: 2rem;
+}
+#quote{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#password{
+    user-select: none;
+    -webkit-user-select: none; 
+    -ms-user-select: none;
+}
+#Submit_button{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    width: 10rem;
+    height: 5rem;
+    font-size: 1rem;
+    color: pink;
+    border-color: pink;
+    border-radius: 50% 20% / 10% 40%;
+
+}
+#Submit_button:hover{
+    background-color: black;
 }
