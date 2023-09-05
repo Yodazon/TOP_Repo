@@ -1,0 +1,27 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 75px 75px 75px 50px;
+    grid-template-rows: 75px 75px 10vh;
+    grid-auto-rows: 100px 500px 10px;
+    gap: 32px;
+    /*following line overrides the gap line above*/
+    column-gap:10px;
+  }
+  
+.card {
+    background-color: peachpuff;
+    border: 1px solid black;
+  }
+p{
+  font-size: 15px;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 50% 50%;
+}
+.blue{
+  background-color: blue;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
