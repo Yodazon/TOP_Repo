@@ -170,9 +170,9 @@ a:visited {
 }
 .column.three{
   display: grid;
+  grid-template-rows: ;
 }
-
-.column div.container{
+.column.one div.container{
     display: grid;
     grid-template-rows: var(--contentRows);
 
@@ -184,18 +184,25 @@ a:visited {
     background-color: var(--postingColor);
     margin-left:var(--postingMarginLeft) ;
 }
-.column.three div{
+.column.two div.container{
     display: grid;
     grid-template-rows: var(--contentRows);
 
     border-radius: var(--rounded);
     box-shadow: 11px 10px 11px 2px rgba(0, 0, 0, 0.3);
     column-gap: 2rem;
+    height: var(--postingSizeHeight);
+    width:var(--postingSizeWidth);
     background-color: var(--postingColor);
     margin-left:var(--postingMarginLeft) ;
-    height:30vh;
-    width: 14vw;
 }
+.column.three div.container{
+    border-radius: var(--rounded);
+    box-shadow: 11px 10px 11px 2px rgba(0, 0, 0, 0.3);
+    margin-left: 3vw ;
+    margin-right: 3vw;
+}
+
 .content_box img{
     width: 30px;
 }
@@ -213,9 +220,15 @@ div.containerImg{
     padding-left: 2rem;
     padding-right: 2rem;
 }
-.container.three{
+.container.three.top{
     display: grid;
-    grid-template-rows: 10vh 10vh 10vh ;
+    /*grid-template-rows: 5vh 5vh 5vh ;*/
+    background-color: var(--postingColor);
+}
+.container.three.bottom{
+    display: grid;
+    background-color: var(--postingColor);
+
 }
 .column.three p{
    color: brown;
