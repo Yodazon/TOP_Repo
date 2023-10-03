@@ -1,0 +1,37 @@
+body,html {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#Main{
+    margin: 0;
+    padding:0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+}
+
+#Body{
+    display: flex;
+    flex-direction: row;;
+    flex-wrap: wrap;
+    background-color: antiquewhite;
+}
+div{
+    border: 1px black solid;
+}
+#header{
+    background-color: grey;
+}
+#footer{
+    background-color: darkgrey;
+}
