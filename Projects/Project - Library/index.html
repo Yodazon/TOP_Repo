@@ -5,16 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
-    <script src ="code.js"></script>
+    <script src ="code.js" defer></script>
 
 
 </head>
     <body>
-        <div id = "Main">
-            <div id = "Header">Boo</div>
-            <div id = "Body">Hello
+        <div id = "main">
+            <div id = "header">
+                <button id="addBook">Add Book</button>
             </div>
-            <div id = "Footer"></div>
+
+
+
+            <div id = "body">Hello</div>
+            <div id = "footer"></div>
+        </div>
+        <div class = "modal">
+            <dialog id="bookPopUp">
+                <p>Add a Book!</p>
+                <input placeholder="Title" id="titleInput"><br><br>
+                <input placeholder="Author" id="authorInput"><br><br>
+                <input placeholder="# Of Pages" id="numberInput"><br><br>
+                <p>Read?</p>
+                <input type = "checkbox" id="readInput"><br>
+                <button id="addToLib">Add Book</button>
+            </dialog>
         </div>
     </body>
+
 </html>
