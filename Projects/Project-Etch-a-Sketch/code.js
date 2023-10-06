@@ -21,9 +21,12 @@ function createFlexboxGrid(gridSize) {
 
     }
 }
+
 function changeColor(event, colour) {
   event.style.backgroundColor = colour; // Change the background color as needed
 }
+
+
 // Add event listener to the container/grid to handle clicks on dynamically generated divs
 const container = document.getElementById("parentContainer");
 let isMouseDown = false;
@@ -31,14 +34,16 @@ let previousDiv = null;
 let colourInput = 'black';
 container.addEventListener("mousedown", handleMouseDown);
 container.addEventListener("mouseover", handleMouseOver);
-//container.addEventListener("mouseup", handleMouseUp);
 document.addEventListener("mouseup", handleMouseUp);
+
+
 // Function to handle the mousedown event on the container
 function handleMouseDown(event) {
   isMouseDown = true;
   previousDiv = event.target;
   changeColor(previousDiv, colourInput);
 }
+
 // Function to handle the mouseover event on the container
 function handleMouseOver(event) {
     if (isMouseDown) {
@@ -49,6 +54,7 @@ function handleMouseOver(event) {
       }
     }
 }
+
 // Function to handle the mouseup event on the container
 function handleMouseUp() {
   isMouseDown = false;

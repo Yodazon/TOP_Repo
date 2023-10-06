@@ -6,9 +6,9 @@ const titleInput = document.getElementById("titleInput")
 const authorInput = document.getElementById("authorInput")
 const numberInput = document.getElementById("numberInput")
 const readInput = document.getElementById("readInput")
-const library = [];
+const library = []
 
-var readButton = document.getElementById("button")
+const rButton = document.getElementsByClassName("button")
 
 
 let counter = 0
@@ -20,19 +20,37 @@ showButton.addEventListener("click", () =>{
   dialogBox.showModal();
 });
 
-readButton.addEventListener("click", () =>{
-  if(readButton.classList.contains(bookRead)){
-    readButton.classList.remove("bookRead")
-    readButton.classList.add("bookNotRead")
-    readButton.textContent = "Not Read"
 
-  }else{
-    readButton.classList.add("bookRead")
-    readButton.classList.remove("bookNotRead")
-    readButton.textContent = "Read"
+
+
+container.addEventListener("click", function(e) {
+
+  if((e.target.id !== 'body') && (e.target.className !== 'library') ){
+    if(e.target.classList.contains('bookRead')){
+      e.target.classList.remove("bookRead")
+      e.target.classList.add("bookNotRead")
+      e.target.textContent = "Not Read"
+    }else{
+      e.target.classList.add("bookRead")
+      e.target.classList.remove("bookNotRead")
+      e.target.textContent = "Read"
+    }
+
+    if(e.target.classList.contains('delete')){
+      var x = e.target.id.match(/\d+/);
+      var extracted = parseInt(x[0])
+
+
+      console.log(extracted)
+      library.splice(extracted, 1);
+      console.log(library)
+
+      libraryStorage(library, container,0);
+    }
   }
-
 })
+
+
 
 closeDialog.addEventListener("click", () =>{
 
@@ -41,7 +59,7 @@ closeDialog.addEventListener("click", () =>{
   library.push(newBook)
   dialogBox.close();
   libraryStorage(library, container,counter);
-  counter =+ 1;
+  counter = library.length;
 })
 
 function Book(title, author, number, read){
@@ -54,10 +72,19 @@ function Book(title, author, number, read){
 }
 
 function libraryStorage(library, container, counter){
-  for (let i = counter; i <library.length; i++ ){
+
+  //To remove previous lib
+  var gridChild = document.getElementById('body');
+  while ( gridChild.firstChild ) gridChild.removeChild( gridChild.firstChild );
+
+
+  for (let i = 0; i <library.length; i++ ){
       const newDiv = document.createElement("div");
+      newDiv.id = "id" + i;
+      newDiv.className = "library"
       const bookString = library[i]
       const readButton = document.createElement("button")
+      const delButton = document.createElement("button")
       //`${bookString.title} ${bookString.author} ${bookString.number} ${bookString.read})`
 
       newDiv.textContent= `${bookString.title} ${bookString.author} ${bookString.number}`
@@ -66,14 +93,20 @@ function libraryStorage(library, container, counter){
         case bookString.read:
           readButton.textContent = "Read"
           readButton.className = "bookRead"
+          readButton.id = "button" + i
           break;
         default:
           readButton.textContent = "Not Read"
           readButton.className = "bookNotRead"
+          readButton.id = "button" + i
       }
-      readButton.appendChild(button)
+      //readButton.appendChild(button)
+      delButton.textContent = "Delete Book"
+      delButton.className = "delete"
+      delButton.id = "delete_" + i
 
-      newDiv.append(buttonContainer);
+      newDiv.append(readButton);
+      newDiv.append(delButton);
 
       container.appendChild(newDiv);
   }
