@@ -8,6 +8,11 @@ const numberInput = document.getElementById("numberInput")
 const readInput = document.getElementById("readInput")
 const library = [];
 
+var readButton = document.getElementById("button")
+
+
+let counter = 0
+
 const container = document.getElementById("body")
 
 
@@ -15,12 +20,28 @@ showButton.addEventListener("click", () =>{
   dialogBox.showModal();
 });
 
+readButton.addEventListener("click", () =>{
+  if(readButton.classList.contains(bookRead)){
+    readButton.classList.remove("bookRead")
+    readButton.classList.add("bookNotRead")
+    readButton.textContent = "Not Read"
+
+  }else{
+    readButton.classList.add("bookRead")
+    readButton.classList.remove("bookNotRead")
+    readButton.textContent = "Read"
+  }
+
+})
+
 closeDialog.addEventListener("click", () =>{
 
-
-  library.push(Book(titleInput.value, authorInput.value, numberInput.value, readInput.checked));
+  const newBook = new Book(titleInput.value, authorInput.value, numberInput.value, readInput.checked)
+  console.log(newBook)
+  library.push(newBook)
   dialogBox.close();
-  libraryStorage(library, container);
+  libraryStorage(library, container,counter);
+  counter =+ 1;
 })
 
 function Book(title, author, number, read){
@@ -32,13 +53,30 @@ function Book(title, author, number, read){
 
 }
 
-function libraryStorage(library, container){
-  const newDiv = document.createElement("div");
+function libraryStorage(library, container, counter){
+  for (let i = counter; i <library.length; i++ ){
+      const newDiv = document.createElement("div");
+      const bookString = library[i]
+      const readButton = document.createElement("button")
+      //`${bookString.title} ${bookString.author} ${bookString.number} ${bookString.read})`
 
-  newDiv.textContent=library.join(', ');
-  container.appendChild(newDiv);
+      newDiv.textContent= `${bookString.title} ${bookString.author} ${bookString.number}`
 
+      switch(true){
+        case bookString.read:
+          readButton.textContent = "Read"
+          readButton.className = "bookRead"
+          break;
+        default:
+          readButton.textContent = "Not Read"
+          readButton.className = "bookNotRead"
+      }
+      readButton.appendChild(button)
 
+      newDiv.append(buttonContainer);
+
+      container.appendChild(newDiv);
+  }
 
 }
 
