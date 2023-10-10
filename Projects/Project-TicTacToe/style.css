@@ -1,0 +1,20 @@
+.gridPlayArea{
+    display:flex;
+    width: 500px;
+    height: 500px;
+    background: white;
+    /*border: 1px solid black;*/
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+}
+.gridBox{
+    border: 3px solid black;
+    border-color: black;
+    background-color: white;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+}
