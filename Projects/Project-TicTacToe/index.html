@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicTacToe</title>
     <link rel="stylesheet" href="style.css">
-    <script src ="code.js" defer ></script>
+    <script  src ="code.js" defer ></script>
 </head>
 <body onload="createTicTacToeGrid()">
     <div id = "parentContainer" class="gridPlayArea">
@@ -14,6 +14,7 @@
         <input placeholder="Player 1 Name" id="player1">
         <input placeholder="Player 2 Name" id="player2">
         <button onclick="startGame()">Start Game</button>
+        <button onclick="createTicTacToeGrid(), reset()"> Reset Board</button>
 
     </div>
 </body>
